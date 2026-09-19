@@ -36,7 +36,21 @@ guided-workflow-assistant/
 
 ## Install
 
-**Claude Code (personal, all projects):**
+**One command, Claude Code:**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ngumcbrightazongwa-ops/guided-workflow-assistant/main/install.sh | sh
+```
+
+```powershell
+irm https://raw.githubusercontent.com/ngumcbrightazongwa-ops/guided-workflow-assistant/main/install.ps1 | iex
+```
+
+Both install it for every project, in `~/.claude/skills/`. To install it for one project only, clone the repo and run `./install.sh /path/to/project` or `.\install.ps1 -Project C:\path\to\project`.
+
+**Claude.ai / Claude desktop:** download `guided-workflow-assistant.skill` from the [latest release](https://github.com/ngumcbrightazongwa-ops/guided-workflow-assistant/releases/latest) and upload it under Settings → Capabilities → Skills.
+
+**By hand, Claude Code (personal, all projects):**
 
 ```bash
 git clone https://github.com/ngumcbrightazongwa-ops/guided-workflow-assistant.git
@@ -51,8 +65,6 @@ Copy-Item -Recurse guided-workflow-assistant\guided-workflow-assistant "$HOME\.c
 ```
 
 **One project only:** copy the inner `guided-workflow-assistant/` folder into the project's `.claude/skills/` instead.
-
-**Claude.ai / Claude desktop:** zip the inner `guided-workflow-assistant/` folder and upload it under Settings → Capabilities → Skills.
 
 ## Use
 
